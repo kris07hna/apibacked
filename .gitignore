@@ -50,12 +50,13 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Models and data
+# Models and data (but include diabetes_model.joblib for deployment)
 *.pkl
-*.joblib
 *.joblib.bak
 *.csv
 *.xlsx
+# Allow specific model file
+!diabetes_model.joblib
 
 # IDE files
 *.sublime-project
