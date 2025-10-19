@@ -1,0 +1,35 @@
+{
+  "model_name": "XGBoost",
+  "features": [
+    "HighBP",
+    "HighChol",
+    "CholCheck",
+    "BMI",
+    "Smoker",
+    "Stroke",
+    "HeartDiseaseorAttack",
+    "PhysActivity",
+    "Fruits",
+    "Veggies",
+    "HvyAlcoholConsump",
+    "AnyHealthcare",
+    "NoDocbcCost",
+    "GenHlth",
+    "MentHlth",
+    "PhysHlth",
+    "DiffWalk",
+    "Sex",
+    "Age",
+    "Education",
+    "Income"
+  ],
+  "feature_importance": null,
+  "metrics": {
+    "accuracy": 0.8522745190791549,
+    "precision": 0.5972762645914397,
+    "recall": 0.19199499687304566,
+    "f1_score": 0.29058211074301943,
+    "roc_auc": 0.8241136824551047
+  },
+  "training_date": "2025-10-18T10:26:05.857348"
+}
