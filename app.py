@@ -9,10 +9,8 @@ import joblib
 import pandas as pd
 import numpy as np
 from pathlib import Path
-import json
 import os
 from datetime import datetime
-from functools import lru_cache
 
 # Import XGBoost at module level for CPU inference
 import xgboost as xgb
@@ -37,16 +35,8 @@ class XGBoostBoosterWrapper:
 
 app = Flask(__name__)
 
-# Optimized CORS for production
-CORS(app, 
-     resources={r"/*": {"origins": "*"}},
-     supports_credentials=True,
-     max_age=3600)
-
-# Response compression for faster transfers
-app.config['COMPRESS_MIMETYPES'] = ['application/json', 'text/html', 'text/css', 'application/javascript']
-app.config['COMPRESS_LEVEL'] = 6
-app.config['COMPRESS_MIN_SIZE'] = 500
+# Simple CORS configuration
+CORS(app)
 
 # Configuration - Railway uses api/ as root, local dev uses parent directory
 BASE_DIR = Path(__file__).parent
